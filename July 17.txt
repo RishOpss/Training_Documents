@@ -1,0 +1,207 @@
+######################
+Day 4: 17th July 2025
+######################	
+
+	- Install git client in Local Machine
+	
+		https://git-scm.com/downloads
+		
+		https://git-scm.com/downloads/win
+		
+			-> git Bash 					# Based on Linux Command Line Interface 
+			-> git CMD 						# Based on Windows Command Line Interface 
+			-> git GUI						# Basic GUI to interact with Git Client
+			
+			-> Visual Studio Code			# Create Projects and Repositories
+		
+		
+	Application Project Workspace/Folder :
+	
+	Java_Maven-Web-Application : Workspace/Folder
+	
+		- src 
+			- main
+				- *.java
+				- *.java
+			- test
+				- *.java 
+				- *.java 			
+		- application.propeties
+		- resources 
+			- html 
+				- *.html 
+				- *.js
+				- *.css
+		- target 
+			- *.war 
+		- DB_Secret
+			- DB_Credentials.json
+		- pom.xml
+		
+		
+	
+	
+	cd d: 
+	mkdir sk-az-400
+	cd sk-az-400
+	mkdir projrepo1
+	mkdir projrepo2
+	cd projrepo1
+		work with git 
+		
+		
+	Local Machine 																						Remote Repository Server 
+	
+	
+	Working Directory 					Stage_Area						Local Git Repository				Remote Repository
+	
+	file1.txt  		 ================>	file1.txt   =================>	index.html_V1.0		 ==============>	index.html_V1.0
+						git add 						git commit								git push
+	
+	file1.txt 		
+
+	Initialize git repository :
+	
+	
+		- git init 					# To Initialize git repository 
+									# It create a .git directory & a default master branch.
+									
+									
+				
+		- git config 
+		
+			User_Name 
+			User_Email 
+			
+			git config --global user.name "Loksai"
+			
+			git config --global user.email "Loksai@asdf.com"
+			
+			
+	Install Git Client 
+
+	cd d: 
+	mkdir sk-az-400
+	cd sk-az-400
+	mkdir projrepo1
+	mkdir projrepo2
+	cd projrepo1
+
+	git init 
+
+			git config --global user.name "Loksai"					# One time activity	for the very first repository		
+			git config --global user.email "Loksai@asdf.com"		# One time activity for the very first repository		
+	
+	echo "rec1" >> file1.txt 
+	
+	git add file1.txt 
+	
+	git commit -m "Created file1"
+	
+	
+	
+	Azure DevOps Services ::::
+	
+		- Access Azure DevOps Services :::
+		
+		
+		- Login to Azure Portal :
+		
+		- Explore the Azure Cloud Services :
+		
+			- Azure DevOps Services 
+			
+			- Virtual Machines 
+			
+			- App Services 
+			
+			- Container Services
+			
+				- ACS / ACR / AKS
+		
+		
+		
+		
+	Login to Azure DevOps Services Portal :
+	
+	- Create Azure DevOps Organization 
+			
+			
+		Goto to Organization Settings!
+
+		
+		https://aka.ms/azpipelines-parallelism-request
+	
+	Login to Azure Portal :
+	
+		- Access Azure DevOps Services
+		
+			- Create Azure DevOps Organization1			Application Level
+				
+				- Azure DevOps Project1 				Micro-Service1
+				
+					- Create Azure Boards,Repos,Pipelines,Test,Artifacts...
+	
+				- Azure DevOps Project2 				Micro-Service2				
+				
+					- Create Azure Boards,Repos,Pipelines,Test,Artifacts...
+	
+			- Create Azure DevOps Organization2
+				
+				- Azure DevOps Project1 
+				
+					- Create Azure Boards,Repos,Pipelines,Test,Artifacts...
+	
+				- Azure DevOps Project2 
+				
+					- Create Azure Boards,Repos,Pipelines,Test,Artifacts...		
+					
+					
+	Azure DevOps Project Types :
+		Used to Manage and Organize the Projects :
+		
+			- Basic 
+			- Agile 
+			- Scrum 
+
+		Basic Project Process:				
+		
+			EPIC	
+				issue1
+					task1
+					task2
+				issue2
+					task 
+					
+		Agile Project Process:
+		
+			EPIC 					- Long Term Project Objective - Migrate 500+ Applications to Cloud
+				Feature - Q1		- ?
+					UserStory1	
+						task1
+						task2
+						bug2						
+					UserStory2
+				Feature - Q2
+					UserStory1 
+					UserStory2		
+				Feature - Q3
+					UserStory1 
+					UserStory2	
+				Feature - Q4
+					UserStory1 
+					UserStory2						
+
+
+		SCRUM Project Process:
+		
+			EPIC 					- Long Term Project Objective - Migrate 500+ Applications to Cloud
+				Feature - Q1
+					Product Backlog Item1	
+						task1
+						task2
+						bug2						
+					Product Backlog Item2
+				Feature - Q2
+					Product Backlog Item1
+					Product Backlog Item2	
