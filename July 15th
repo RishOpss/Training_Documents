@@ -1,0 +1,187 @@
+######################
+Day 2: 15th July 2025
+######################	
+	
+	- Continuous Delivery / Continuous Deployment :	
+	
+		- Both Continuous Delivery & Continuous Deployment process are used to release the changes to Production Environments.
+	
+			- Continuous Delivery 
+					=> It is a process to release the changes to Production Environment
+					=> Expects Manual approvals
+					=> Meant for Monolith Applications
+					=> During Continuous Delivery, Application Downtime is expected.
+
+				Eg.: 
+				
+					Banking/Insurance/Stock_Market  --> Legacy Applications
+					
+					Online Banking / Transations 
+					
+					- Application Release/Deployment Window ==> 4Hr - 6Hrs
+					
+						-> Fix 
+						-> Revert!
+				
+			- Continuous Deployment
+					=> It is a process to release the changes to Production Environment without any manual intervension/Approvals
+					=> Micro-Service based Applications Architecture are required to achieve Continuous Deployment
+					=> Changes can be implemented without any downtime. 
+					=> Achieve ZERO Downtime.
+			
+				Eg.: 
+					
+					Netflix/Amazon/facebook/google
+					
+					
+				
+					
+	www.amazon.com :
+	
+		sign-up			==> Micro-Service1 => Developer1 => Code,Unit Test,promote for further testing-> Release to Prod	
+		sign-in			==> Micro-Service2
+		search
+		add to cart 
+		place the order 
+		payment 
+		confirm order 
+		track 
+		
+			- Tools: 
+				- Azure Pipelines/Jenkins/Gitlab-ci/GitHub-Actions  
+				- Docker/Kubernetes/ACS/ACR/AKS
+			
+			- CI/CD : Continuous Integration/Continuous Delivery/Deployment
+			
+				CI/Cd 
+				CD/CD
+				
+	- Continuous Monitoring :::
+	
+		- Process of Continuously Monitoring the Production Environments and Applications to ensure Zero-Downtime and Business Continuity.
+		
+		
+			Production Servers ==> 5 Prod Servers 
+			
+			CPU		=> Utilization
+			Memory  => Utilization
+			
+		
+		- Monitoring Tools :
+		
+			- Infra-Structure Monitor Tools 
+				-> Azure Monitor/AWS Cloud Watch/Prometheus/Grafana/Dynatrace/Splunk/Nagios 
+				
+				-> Threshold Limit => 70% of CPU Utilization
+				-> Alerts Manager
+				
+			
+			
+	- Infra-Structure Management :::
+
+		- Provision/Create the IT Resources 
+		
+		- Configure the IT Resources 
+		
+		
+		IAC(Infra-Structure As Code) Tools :
+		
+			-> ARM(Az Resource Manager) / Terraform / AWS Cloudformation
+			-> Ansible/Chef/Puppet - Configuration Management Tools
+				
+				
+	DevOps :
+	
+		Tools :
+		
+			Open-Source DevOps Tools :
+				GITHUB/Jenkins/Docker/Kubernetes/Ansible/Terraform			
+			
+			
+			Managed Services : IAAS/PAAS/SAAS
+			
+				Azure DevOps Services
+					- Azure Boards 
+					- Azure Repos
+					- Azure Pipelines 
+					- Azure Test 
+					- Azure Artifacts
+					
+				AWS Developer Tools : AWS CodeCommit/CodeBuild/CodeDeploy/CodePipeline
+				
+		
+	DevOps is all about :
+	
+		- People 
+		- Process
+		- Tools 
+		
+		Detailed DevOps Assessment!
+		
+		
+		Waterfall/Agile/DevOps/DevSecOps/GitOps/MLOps/AIOps/SRE....
+		
+		
+	- Working with Azure DevOps Services :::
+
+
+	- Introduction to Azure DevOps Services ::::
+	
+		Azure DevOps Services
+			- Azure Boards 
+			- Azure Repos
+			- Azure Pipelines 
+			- Azure Test 
+			- Azure Artifacts
+		
+		ALM Tool - Application LifeCycle Management Tool --> Jira
+
+		
+	Pre-requisites!
+	
+		- Git Repository Management :::
+			- Fundamentals
+	
+		- Create GITHUB Account 				
+			# https://github.com/
+		
+		- Create Azure Account - Free Tier
+		
+			# https://portal.azure.com/signin/index/			# To Create Azure Account 
+			
+				-> Active Email_ID
+				-> Active Mobile_Number 
+				-> Active Credit/Debit Cards - User Authencation purpose - enabled with International Transations.
+
+			Free Account is eligible for 12 Months 
+			
+			$200 for initial 1 Month. 
+			
+			From 2nd Month, it will be Pay-As-You-Go Model for some service.
+			
+		https://aex.dev.azure.com/					# Azure DevOps Portal	
+			
+		- Install Visual Studio Code in Local Machine
+			# https://code.visualstudio.com/download				
+		
+		- Create DockerHub Account
+			# https://hub.docker.com/
+		
+		
+Next :::
+
+	- Git Repository Management :::
+		- Fundamentals	
+		
+	- Overview of Azure Portal and DevOps Dashboard 
+	
+		Azure DevOps Services
+			- Azure Boards 
+			
+			
+			- Azure Repos
+			- Azure Pipelines 
+			- Azure Test 
+			- Azure Artifacts					
+
+			
