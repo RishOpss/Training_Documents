@@ -1,0 +1,308 @@
+Start Date : 14th July 2025
+
+######################
+Day 1: 14th July 2025
+######################
+
+	- About DevOps 
+
+	- Introduction to Azure DevOps Services 
+	
+	- Access Azure DevOps Services
+	
+	
+	
+Tools: VCS - GIT 
+	
+	- Micro-Service Based Application Architecture
+	
+	- Containerize the Micro-Services
+	
+
+What is DevOps ?
+
+	Software Development Life Cycle - SDLC 
+	
+	Software Applications 
+	
+		- Desktop Applications
+		- Web Applications
+		- Mobile Applications
+		- Embedded Applications 
+
+		
+	- Requirement Analysis 
+	
+	- Design and Documentation 
+	
+	- Code & Development
+	
+	- Testing 
+	
+	- Implementation to Production 
+	
+	- Monitor/Maintain
+
+		- Desktop Applications
+			==> Super-Market Application :
+					Functions/Modules:
+						--> Design User Interface 
+						--> Stock Management 
+						--> Database
+						--> Billing 
+						--> Payment 
+								-> CASH 
+								-> CARD 
+									-> Online Payment 
+									-> UPI 
+				
+Waterfall Model:
+		- Top-Down Approach!
+		- Linear in fashion 
+		- Meant for Monolith Application Architecture
+		
+Main_Project :
+			
+	- Requirement Analysis 
+	
+	- Design and Documentation 
+	
+	- Code & Development					7th Month of the Project
+	
+	- Testing 
+	
+	- Implementation to Production 
+	
+	- Monitor/Maintain				
+
+
+Enhancement_Project :
+			
+	- Requirement Analysis 
+	
+	- Design and Documentation 
+	
+	- Code & Development					
+	
+	- Testing 
+	
+	- Implementation to Production 
+	
+	- Monitor/Maintain		
+	
+	
+	
+AGILE Methodologies :
+
+		- Desktop Applications
+			==> Super-Market Application :
+					Functions/Modules/Iterations:
+						--> Design User Interface 
+						--> Stock Management 
+						--> Database
+						--> Billing 
+						--> Payment 
+								-> CASH 
+								-> CARD 
+									-> Online Payment 
+									-> UPI	
+
+Iteration 1 : Design User Interface
+
+	- Requirement Analysis 
+	
+	- Design and Documentation 
+	
+	- Code & Development					
+	
+	- Testing 
+	
+	- Implementation to Production with proper approvals
+	
+	- Monitor/Maintain		
+	
+Iteration 2 : Stock Management
+
+	- Requirement Analysis 
+	
+	- Design and Documentation 
+	
+	- Code & Development					
+	
+	- Testing 
+	
+	- Implementation to Production with proper approvals
+	
+	- Monitor/Maintain		
+	
+	
+Iteration nth : Payment: UPI/Online
+
+	- Requirement Analysis 
+	
+	- Design and Documentation 
+	
+	- Code & Development					
+	
+	- Testing 
+	
+	- Implementation to Production with proper approvals
+	
+	- Monitor/Maintain	
+	
+
+	Using AGILE Methodologies, 
+	
+		we can able to achieve :
+	
+			- Continuous Development 
+			- Continuous Integration
+			- Continuous Testing 
+			- Continuous Delivery 
+					=> It is a process to release the changes to Production Environment
+					=> Expects Manual approvals
+				
+		we cannot achieve 
+		
+			- Continuous Deployment
+					=> It is a process to release the changes to Production Environment without any manual intervension/Approvals
+
+
+				
+	DevOps ::::
+		
+		- DevOps is the Software Development Strategies, which promotes the collaboration between the teams like Development Team and Operations Teams to achieve Continuous Development, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployment and Continuous Monitoring in more automated fashion.
+	
+	
+	How to Implement DevOps ?
+	
+		- Identify the Teams involved in the process of SDLC :
+		
+			- DevOps Team 
+				- Infra-Structure Management Team	--> Provision/Create IT Resource 
+				- Application Development Team 
+				- Testing Team 
+				- Release Management Team 
+				- Production Support Team 
+				- Production Monitoring Team 
+				- IT Security 
+				
+				
+		- Environments:
+		
+			Non-Prod Environments											Production Environments
+		
+				- Dev 
+				
+				- Build 
+				
+				- Test 
+					QA 
+					UAT 					=================>					Production Servers 
+	
+		
+		- Application Architecture :
+		
+			- Monolith Application Architecture :
+			
+				- Tightly Coupled 
+				- All the functions of the Application are tighly coupled in nature 
+				- Only Continuous Delivery can be possible with this Architecture
+			
+			- Micro-Service Based Architecture :
+			
+				- It is Loosely Coupled Application Architecture
+				- Functions/Modules/Iterations ==> Micro-Service
+				- The Entire Application is divided into Micro-Services 
+				- These Micro-Services can be independently developed and implemented 
+				- Using DevOps, Continuous Deployment can achieved without any downtime, only if it Micro-Service Based Application Architecture 
+				
+				
+		- DevOps Stages :::
+		
+			- Continuous Development :
+				- It is the capability of the Application Development Team to Continuously develop the changes and take it for further testing
+				- It is used to improve the Developers' Productivity.
+				
+				Roles of Developer :
+					- Create Source Code 
+					
+				In AGILE Methodologies :
+				
+					- Create Source Code 
+					- Manual Build 
+					- Create Artifacts 
+					- Manual Unit Testing 
+					- Promote the changes to Test Environment
+					- Notify the Testing Team thru Emails 
+				
+				Using DevOps Approach :
+				
+					- Create Source Code 
+					- Save the Code in the Source Code Repository (GITHUB/Azure Repos)
+					
+					Using DevOps Strategies :
+					
+					Automate :
+					
+					- Application Build 
+						=> It is process of compiling the source code and creating artifacts(Binaries - *.war/*.jar/*.exec,*.dll)
+					- Unit Testing 
+					- Code Promotions 
+					- Notifications
+
+
+				Tools :
+				
+					- IDEs - Intergrated Development Environment - Eclipse,Visual Studio,Pycharm,Visual Studio Code
+					- GITHUB/GitLab/Azure Repos/
+					- Build Tools integrated with IDEs 
+					
+					
+					
+			- Continuous Integration :
+				- It is the capability of the Application Development Team to Continuously integrate the changes for further testing				
+
+					Using DevOps Strategies :
+					
+					Automate :
+					
+					- Application Build 
+						=> It is process of compiling the source code and creating artifacts(Binaries - *.war/*.jar/*.exec,*.dll)
+					- Unit Testing - 
+					- Code Promotions to Test Environments
+					- Notifications
+					
+				Tools :
+				
+					- IDEs - Intergrated Development Environment - Eclipse,Visual Studio,Pycharm,Visual Studio Code
+					- GITHUB/GitLab/Azure Repos/
+					- Build Tools integrated with IDEs 
+					- Build Tools - Maven/Gradle/.NET SDK,Python - Junit
+					- Build Orchestration Tools :
+						- Azure Pipelines/Jenkins/Docker/Kubernetes/Ansible/GitHub Actions/Gitlab-ci
+
+					
+			
+			- Continuous Testing :
+				- It is the capability of the Testing Team to Continuously test the Changes without impacting other changes.
+				
+				Tools :
+				
+					- TestNG/Selenium/JUNIT
+						- Azure Pipelines/Azure Test/Jenkins/Ansible/GitHub Actions/Gitlab-ci
+		
+		
+Next :::		
+			- Continuous Delivery / Continuous Deployment :
+			
+			- Continuous Monitoring :		
+			
+			
+			- Infra-Structure Management
+			
+			- Azure DevOps Services 
+			
+	
+			- Create github Account : 	
+	
