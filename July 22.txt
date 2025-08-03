@@ -1,0 +1,138 @@
+######################
+Day 7: 22nd July 2025
+######################
+
+
+	https://learn.microsoft.com/en-us/azure/devops/boards/?view=azure-devops
+	
+	
+	Azure Dashboard 
+	
+	Queries
+	
+	
+	
+	Azure Repos :			vs 		GitHub 
+	
+		- Remote Git Repository 
+		
+		
+		Working with Azure Repositories :
+		
+			- Create 
+			- 
+		
+		
+		Pull Request 			# Merge the Changes to Target Branch
+		
+		
+		
+		Continuous Development :::
+		
+			- Create the Source Code in Local Machine 
+			
+			- Push the Changes to Remote Azure Repository
+			
+		Continuous Integration :::
+		
+		
+		Java Web-Application Project using Maven :
+		
+		
+			Understand the Application Source Code Repository :
+			
+				Mywebapp-project1		Project Folder/Workspace 
+				
+					src 
+						main 
+							*.java 
+							*.java 
+							*.java 
+						test 
+							*.java 
+							*.java
+					resources 
+						*.html 
+						*.js
+						*.css 
+					pom.xml 
+					target 
+						*.war 
+					application.properties 
+					
+					
+		Maven : Is Java Application Build Tool 
+		
+			- Compile/UnitTest/Create Artifacts 
+			
+			
+			- pom.xml 						# Project Object Model 
+			
+				- This defines the properties of the Maven Build 
+				- It defines all the plugins and dependencies required to build an application.
+				
+				Build Environment: 
+					
+						jdk,maven 
+						
+			- maven goals :					# set of actions 
+			
+				- mvn compile			# Compile the source code 
+				- mvn test 				# Compile the source code & perform automate unit testing 
+				- mvn package			# Compile the source code, perform automate unit testing & Create artifacts in the target folder
+				- mvn clean 			# Clean-up the target folder
+				
+				
+				Eg.: 
+				
+					mvn clean package 
+								
+					
+		https://github.com/SK-AZ-400-1407/java-webapp-project.git
+		
+		
+		
+			Project Team1 : Source Code 
+			
+								Azure Repo 		==> AzPipeline!
+								
+			Project Team2 : Source Code 
+			
+								GitHub Repo 	==> AzPipeline!
+								
+			
+		Continuous Development :::
+		
+			- Install git client in Local Machine!		# One Time activity.
+			
+			
+	
+			- Clone the AzRepo using Git Client 		# For the very first time.
+			
+			- Work on the incremental changes 		
+			
+			- Push the changes back to AzRepo
+		
+		
+		
+		git clone https://LoksaiETA-Orgn@dev.azure.com/LoksaiETA-Orgn/devops-proj1/_git/java-webapp-project
+		
+		
+		git remote -v 			# get the list of remote repositories linked with the local repository
+		
+		git remote add :::
+		
+			git remote add origin https://LoksaiETA-Orgn@dev.azure.com/LoksaiETA-Orgn/devops-proj1/_git/java-webapp-project
+			
+		git remote remove :::
+		
+			git remote remove origin
+			
+
+		Azure Personal Access Token - PAT 		Afgfhfghfghext :
+
+	Using Visual Studio Code 
+		
+		- Clone AzRepo 
+		- Working with AzRepo using VS Code.
+	
