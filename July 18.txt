@@ -1,0 +1,215 @@
+######################
+Day 5: 18th July 2025
+######################	
+
+	Azure Pipelines :
+	
+	
+		Agents :
+
+			- Node/VM 
+			
+			Self-Hosted Agents 
+
+		Azure Pipeline :
+		
+			- Azure Build Pipeline 
+			
+				- Perform Application Build in the Non-Prod Environments
+			
+			- Azure Release Pipeline 
+			
+				- Promote the Changes from Non-Prod to Prod Environment
+		
+			- Build Environments :
+			
+				- Managed Agents 
+				
+				- Self-Hosted Agents 
+
+
+
+	CI/CD ==> 
+	
+		Scenario 1 :
+		
+			End-to-End Pipeline ==> Build, Create Artifacts, Test and Deploy
+			
+		Scenario 2 :
+			
+			Build Pipeline ==> Build and Create Artifacts, Test  ==> *.war / *.dll / *.exec
+								
+								Containerization!
+
+			Release Pipeline ==> Promote the Changes from Non-Prod to Prod Environment
+			
+			
+		CICD Pipeline --> Composed of various Stages(Collection Tasks)				
+				
+			Build Environment (VM)	-- Install the Build Tools		
+				
+				- Self Hosted 
+					- Manually Create, Install the required Build Tools and maintain the Agent 
+					- This can be reusable 
+					
+					Agent Pool:
+						- Self Hosted Agent1 - Java Application Build --> Jdk,maven 
+						- Self Hosted Agent2 - Java Application Build --> Jdk,maven 
+						- Self Hosted Agent3 - Java Application Build --> Jdk,maven 
+					
+				- Azure Managed Agent 
+				
+					Agent Pool:
+						- Managed Hosted Agent1 - Java Application Build --> Jdk,maven 
+						- Managed Hosted Agent2 - Java Application Build --> Jdk,maven 
+						- Managed Hosted Agent3 - Java Application Build --> Jdk,maven 	
+		
+			Service Connections - Used to Access the external services 	
+			
+			
+	- Non-Containerized Application 
+	
+		1. Developer Created the Source Code 
+		2. Commit the Changes to Source Code Repository (github/AzRepos)
+		
+	Using DevOps CICD Pipeline :
+	
+		1. SCM_Checkout --> Download the SourceCode from Source Code Repository to Build Environment
+		2. Application Build (Compile the source code and create artifacts -  mywebapp.war)
+		3. Unit Test 
+		4. Promote the Application Artifacts to QA Environment
+		5. Automated QA Testing (Testing Team) - Reg/Func/Perf/Integration
+		6. Promote the Application Artifacts to UAT Environment
+		7. Automated/Manual UAT Testing (Done by the Business Users)
+	
+		8. Promote the Application Artifacts to Prod Environment
+
+
+	- Containerized Applications : Docker & Kubernetes
+	
+		1. Developer Created the Source Code 
+		2. Commit the Changes to Source Code Repository (github/AzRepos)
+		
+	Using DevOps CICD Pipeline :
+	
+		1. SCM_Checkout --> Download the SourceCode from Source Code Repository to Build Environment
+		2. Application Build (Compile the source code and create artifacts -  mywebapp.war)
+		2.1 Applications Container Image Build using ACS - mywebapp_image:v1.1
+		2.2 Publish the Container Image to Container Registry using ACR
+		3. Unit Test 
+		4. Deploy the Application Container Images to QA Environment
+		5. Automated QA Testing (Testing Team)
+		6. Deploy the Application Container Images to UAT Environment
+		7. Automated/Manual UAT Testing (Done by the Business Users)
+	
+		8. Deploy the Application Container Images to Prod Environment	
+		
+		
+		
+	Container ?
+	
+		Containerization :::
+		
+			-> It is a process of packaging the application along with its dependencies
+			
+			
+	Developers' / Deployment Perspective :::
+	
+		Role :
+		
+			Dev Environment :
+			
+				- Create Source Code 
+				
+				- Build 				--> mywebapp.war 
+				
+				Using Containerization :
+				
+				Package the application : (mywebapp.war,jdk_v11,Tomcat_v8)	==> mywebapp_img:v1.0
+				
+				
+				Publish the Container Image to Container Registry(DockerHub/ACR)
+				
+			QA-Test Server :
+			
+			
+				pull Container Image from Container Registry(DockerHub/ACR)
+				
+				Create Application Container 
+	
+
+			UAT-Test Server :
+			
+			
+				pull Container Image from Container Registry(DockerHub/ACR)
+				
+				Create Application Container 
+
+
+			Prod-Test Server :
+			
+			
+				pull Container Image from Container Registry(DockerHub/ACR)
+				
+				Create Application Container 				
+	
+			
+			
+		Container Image :
+		
+			- It is static file that composed of various layers 
+			- Non-Executable 
+			- Dockerfile - composed of various Instructions to build an Image.
+			
+		Container :
+		
+			- Executable entity of Container Images 
+			
+			
+		Terminologies :
+		
+			- Container Engine 			# To Create/Manage the Containers
+			
+			- Container Image 	
+							- It is static file that composed of various layers 
+							- Non-Executable 
+							- Dockerfile - composed of various Instructions to build an Image.
+							
+			- Container
+							- Executable entity of Container Images 
+
+							
+			- Container Registry 
+							- Version Control / Maintain the Container Images 
+							- (DockerHub/ACR)
+							
+			
+			- Container Repository
+			
+							- Subset of Container Registry
+							
+							
+							
+			
+			Version Control Source Code					==> 	Artifactory Libraries 			==> 	Container Registries
+			
+				- GitHub/AzRepos								- Jfrog/AzArtifact						- DockerHub/AzContainer Registry
+				
+					mywebapp.jsp_v1.1					==>		    mywebapp.war_v1.1			==> 	   mywebapp-Img_v1.1	
+					mywebapp.jsp_v1.2					==>		    mywebapp.war_v1.2			==> 	   mywebapp-Img_v1.2				
+					mywebapp.jsp_v1.3					==>		    mywebapp.war_v1.3			==> 	   mywebapp-Img_v1.3				
+			
+			
+			
+		- Create & Access Az VM :
+			
+		- Connect to VM :
+		
+			- Az VM Connect - Thru Brower 
+			
+			- SSH Agents 
+				- Putty / MobaXterm 		# Can be installed in local windows machines 
+				
+				Download MobaXterm			# https://mobaxterm.mobatek.net/download-home-edition.html
+				
+			- Terminals
