@@ -1,0 +1,257 @@
+######################
+Day 9: 24th July 2025
+######################
+
+	GIT Branching Techniques :::
+	
+		- Git Branches are the logical copy of a repository/branch
+		- Git Branches are used to perform parallel development
+		- Branching Strategies are used to enable the Parallel development
+		- By default master/main Branch gets created for any repository
+		- master/main branch can be considered as a production version of source
+		- Always recommended to use Branching Strategies to ensure integrity of master/main Branch.
+		
+	Example :
+	
+	Scenario 2: 	
+	
+		Repo1 :
+		
+			master : c1,c2,c3		==> index.html		$ refers to Prod Version 
+			
+						c1,c2,c3,c4								# c4 - changes merged from Developer_Branch
+			
+				Developer_Branch : c1,c2,c3
+				
+							c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3				# Upon Merging changes from feature1 & feature2
+				
+					feature1_Branch : c1,c2,c3 	==> index.html
+
+							c1,c2,c3,f1cm1,f1cm2,f1cm3
+							
+					feature2_Branch : c1,c2,c3 	==> index.html
+
+							c1,c2,c3,f2cm1,f2cm2,f2cm3		
+	
+	- Working with Git Branches
+		
+		- Create git branch 
+			- The branches are created based on the reference of current branch.
+			
+		
+			git branch				# To get the list of branches
+			
+			git branch feature1		# To create a new branch
+			
+			git switch feature1		# To switch from one branch to another
+			
+			git switch -c feature2	# To Create a New Branch and Switch to it
+			
+			
+			
+		- Repo:
+		
+			master : c1,c2,c3 
+			
+				feature1 : c1,c2,c3 
+							c1,c2,c3,f1cm1
+							
+					
+					git switch master 				# Switch to target branch to merge the changes 
+							
+					git merge feature1				# To Merge the changes to target branch(master)
+													# Execute the Merge command from the target branch
+			
+			
+		- Merge form more than one feature!
+		
+		- Merge Conflict :
+		
+			- When more than one user/feature try to update the same file/record in the target branch, Merge Conflict Occurs.
+			
+		- Fix Merge Conflict :
+		
+			1. Identify the file(s) causing the merge conflict.
+			
+			2. Open and review the file content, decide which feature changes to be deleted/retained.
+			
+			3. Edit that file, remove the unwanted header/footer tags & update the records and save the file.
+			
+			4. Perform git add & git commit in the target branch
+			
+			
+		- On DevOps Perspective ::::
+		
+			- Prevent Merge Conflict using DevOps Strategies!
+			
+	
+	- GIT Rebase :::
+	
+		- It used to keep the current branch in-sync with the target branch.
+		- It help maintain the linear commit history.
+		- Rebase helps to prevent merge conflicts in the target branch.
+		- So, as a best practise it is always recommended to perform rebase before merge!	
+		
+		
+		Repo:
+		
+			master : c1,c2,c3 		
+
+						- c1,c2,c3,f1cm1,f1cm2,f1cm3						# Upon Merging Feature1
+						
+						- c1,c2,c3,f2cm1,f2cm2,f2cm3,f1cm1,f1cm2,f1cm3		# Upon Merging Feature2 without Rebase
+						
+						- c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3		# Upon Merging Feature2 with proper rebase!
+						
+				
+				feature1 : c1,c2,c3 
+				
+							c1,c2,c3,f1cm1,f1cm2,f1cm3
+							
+							git switch master 
+							
+							git merge feature1 
+							
+				
+				feature2 : c1,c2,c3 
+							c1,c2,c3,f2cm1,f2cm2,f2cm3	
+
+							git rebase master 
+							
+							c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3								
+							
+							git switch master 
+							
+							git merge feature2 						
+							
+	
+	- Git Squash :::
+	
+		-> Used to Combine more than one commits and create single commit point.
+		
+		Repo :
+		
+			master : cm1,cm2,cm3 
+						
+						cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,...........................................,f1cm200
+			
+				feature1 : cm1,cm2,cm3 
+							cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,...........................................,f1cm200
+							
+						merge to master :::
+						
+							git switch master 
+							
+							git merge --squash feature1 
+							
+								git commit -m "CM4"				# Commit in the target branch!
+
+								
+							
+		Eg.: 
+		
+		Repo1 :
+		
+			master : c1,c2,c3		==> index.html		$ refers to Prod Version 
+			
+						c1,c2,c3,c4								# c4 - changes merged from Developer_Branch
+			
+				Developer_Branch : c1,c2,c3
+				
+							c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3				# Upon Merging changes from feature1 & feature2
+				
+					feature1_Branch : c1,c2,c3 	==> index.html
+
+							c1,c2,c3,f1cm1,f1cm2,f1cm3
+							
+					feature2_Branch : c1,c2,c3 	==> index.html
+
+							c1,c2,c3,f2cm1,f2cm2,f2cm3	
+							
+							
+	Scenario 4: 	
+	
+		Repo1 :
+		
+			master : c1,c2,c3		==> index.html		$ refers to Prod Version 
+			
+						c1,c2,c3,c4								# c4 - changes merged from Release_Branch	
+
+
+				Release_Branch : c1,c2,c3	
+
+							c1,c2,c3,Team1_Changes,Team2_Changes
+				
+						
+					Integration_Branch1 : c1,c2,c3																	# Team1
+				
+								c1,c2,c3,Developer1_Changes,Developer2_Changes		# Upon Merging changes from Developer1 & Developer2
+				
+						Developer1_Branch : c1,c2,c3
+						
+									c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3	# Upon Merging changes from feature1 & feature2
+						
+							feature1_Branch : c1,c2,c3 	==> index.html
+
+									c1,c2,c3,f1cm1,f1cm2,f1cm3
+									
+							feature2_Branch : c1,c2,c3 	==> index.html
+
+									c1,c2,c3,f2cm1,f2cm2,f2cm3
+									
+						Developer2_Branch : c1,c2,c3	
+						
+									c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3	# Upon Merging changes from feature1 & feature2
+						
+							feature1_Branch : c1,c2,c3 	==> index.html
+
+									c1,c2,c3,f1cm1,f1cm2,f1cm3
+									
+							feature2_Branch : c1,c2,c3 	==> index.html
+
+									c1,c2,c3,f2cm1,f2cm2,f2cm3
+
+
+					Integration_Branch2 : c1,c2,c3																	# Team2
+				
+								c1,c2,c3,Developer1_Changes,Developer2_Changes		# Upon Merging changes from Developer1 & Developer2
+				
+						Developer1_Branch : c1,c2,c3
+						
+									c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3	# Upon Merging changes from feature1 & feature2
+						
+							feature1_Branch : c1,c2,c3 	==> index.html
+
+									c1,c2,c3,f1cm1,f1cm2,f1cm3
+									
+							feature2_Branch : c1,c2,c3 	==> index.html
+
+									c1,c2,c3,f2cm1,f2cm2,f2cm3
+									
+						Developer2_Branch : c1,c2,c3	
+						
+									c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3	# Upon Merging changes from feature1 & feature2
+						
+							feature1_Branch : c1,c2,c3 	==> index.html
+
+									c1,c2,c3,f1cm1,f1cm2,f1cm3
+									
+							feature2_Branch : c1,c2,c3 	==> index.html
+
+									c1,c2,c3,f2cm1,f2cm2,f2cm3
+													
+													
+	- Cherry-Pick!
+	
+		# Is used to merge a specific commit to target branch 
+		# It is not recommended to use cherry-pick!
+		
+			git cherry-pick <commit_id> 
+			
+			git cherry-pick <commit_id> <commit_id>
+			
+			
+Next :
+			
+	- GIT Stash :::
+	- Handling Az Remote Repos :
