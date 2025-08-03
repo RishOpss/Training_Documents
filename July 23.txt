@@ -1,0 +1,259 @@
+######################
+Day 8: 23rd July 2025
+######################
+
+	- Working with GIT Cli Commands using git  bash 
+	
+	- Using Visual Studio Code 
+	
+	- Git Core Concepts :
+	
+	- Git Misc Cli Command :
+	
+	- Git Branching Techniques/Strategies :
+	
+	- Handle Remote Repositories(Azure Repositories) :
+	
+	
+	- Git File Workflow :	
+	
+	
+	Local Machine 																						Remote Repository Server 
+	
+	
+	Working Directory 					Stage_Area						Local Git Repository				Remote Repository
+	
+	index.html 		 ================>	index.html  =================>	index.html_V1.0		 ==============>	index.html_V1.0
+						git add 						git commit								git push
+	
+	
+	
+	Developers' Workload :
+	
+	- Enhancement / Bug_Fixing Project 
+	
+	- New Project 
+	
+	
+	
+	
+	git clone 				# To Clone/Copy the entire Remote Repository to Local Machine 
+	
+	git add 				# To Add the Changes from Working Directory to Staging Area 
+	
+	git commit 				# To Commit the Changes from Staging Area to Local Repository
+	
+	git Push 				# To push the Changes from Local Repository to Remote Repository
+	
+	git fetch/git pull 
+	
+		# Both git fetch and git pull are used to handle the incremental changes from Repositories.
+		
+		git fetch 	
+			- It is just to check for incremental changes in Remote Repository. If there is any incremental changes exist, get fetch will update the details of the incremental changes in the Local Repository. It will never update the Changes in Working Directory.
+			
+		git pull 	
+			- It will check for incremental changes in Remote Repository. If there is any incremental changes exist, get pull will update the details of the incremental changes in the Local Repository as well as the changes gets updated in the Working Directory.
+			
+			git pull => git fetch + git merge
+ 
+			# It is used keep the local Repository in-sync with remote repository
+	
+
+
+	- Git Misc Cli Command :
+
+
+		git init 
+
+		git status 
+		
+		git add 
+		
+		git commit 
+		
+		git log 
+		
+		
+		
+		Git Add :
+		
+		
+			- git add <file_name>
+
+			- git add <file1_name> <file2_name>
+			
+			- git add *.java *.doc
+			
+			- git add .											# To add all the files to staging area.
+			
+			
+		Git Log :
+		
+			- git log 				# Get the commit history 
+			
+			- git log --oneline 
+			
+			- git log --oneline - 3
+			
+			- git log --stat 
+			
+			- git log -2
+			
+		git show <commit_id> 	
+		
+		
+		Unstage :
+		
+			- git rm --cached <file1_name>		# Remove the file from staging area 
+			
+			- git rm -f <file1_name>			# Remove the file from staging area  as well as from working directory
+		
+			
+		
+		ls  					# Linux Command to list the directory
+		
+		git ls-files 			# Git Command to list the files that are being tracked by git.
+		
+		
+		git commit  ::::
+		
+			git commit -m <Commit Message>
+			
+			Release_Number 
+			CR_Number 
+			
+			git commit -m "CR0825 - Updated the User Login function"
+			
+		
+		GitIgnore :
+
+				# This is to ignore the files from tracking!
+				# Create .gitignore file 
+				# update the .gitignore file with all the file names/folder name to be ignored.
+				# As a best practise, .gitignore should be the very initial commit in any repository
+
+
+	Local Machine 																						Remote Repository Server 
+	
+	
+	Working Directory 					Stage_Area						Local Git Repository				Remote Repository
+
+
+
+	Mywebapp-project1		
+	Project Folder/Workspace 	--> 															==> 
+	
+		src 
+			main 
+				*.java 
+				*.java 
+				*.java 
+			test 
+				*.java 
+				*.java
+		resources 
+			*.html 
+			*.js
+			*.css 
+			webdocs
+		pom.xml 
+		target 
+			*.war 
+		application.properties 
+		DB_Credentials.json
+			- user_name
+			_ Conn_string 
+			_ Password
+					
+					
+					
+					
+			vi .gitignore 
+			
+				update the .gitignore file with all the file names/folder name to be ignored.
+				
+				resources/webdocs/
+				
+			save 
+			
+			git add .
+			
+			git commit -m "Initial Commit - Created .gitignore"
+			
+			
+	
+	
+	Git Revert / Reset :::
+	
+
+	HEAD Pointer ::
+	
+	
+	git reset :::
+	
+		git reset is used to undo the changes from the repository
+		git reset will reset the commit point to the previous commit point 
+		git reset will not create any new commit point for track purpose 
+		git reset is not recommended in the shared repository 
+	
+		Syntax :		
+			- git reset <reset_option> <previous_Commit_ID>
+			
+		Reset Options ::
+		
+			git reset --soft <previous_Commit_ID> :::
+				- git reset will reset the HEAD pointer to the previous commit point.
+				- It will take the changes back to staging area 
+				- The Changes will be available in staging area and working directory					
+		
+			git reset --mixed <previous_Commit_ID> :::										# Default
+				- git reset will reset the HEAD pointer to the previous commit point.
+				- It will take the changes back to working directory 
+				- The Changes will be available only in working directory			
+			
+			git reset --hard  <previous_Commit_ID> :::
+				- git reset will reset the HEAD pointer to the previous commit point.
+				- It will permanently delete the files from the system 
+				
+		ETL :::
+				
+				GIT_Repo ==> T ==> L
+				
+				CM1				==> 	T 		==> 	L
+				Initial_Commit
+		
+		Repo :
+		
+			c5
+			c4
+			c3
+			c2
+			c1
+	
+	
+		git reset c2 
+		
+
+			c2
+			c1
+	
+	
+	git revert :::
+	
+		- Git Revert is same as git reset --hard option 		
+		- git revert is used to undo a specific commit 		
+		- git revert will create a new commit point for tracking purpose.		
+		- git revert will maintain the commit history		
+		- git revert is recommended in shared repositories
+		
+		Syntax ::
+			git revert <specific_Commit_ID>
+			
+			
+
+Next :::
+
+	GIT Branching Techniques :::
+	
+	Remote Repositories using github & AzRepo - VSCode
