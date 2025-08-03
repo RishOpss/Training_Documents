@@ -1,0 +1,507 @@
+######################
+Day 3: 16th July 2025
+######################	
+
+
+	- Version Control System :::
+	
+		- It is used to Version Control the Source Code Changes
+		- It is used to Track the Source Code Changes
+		
+		
+	Developer :
+	
+	Create Source Code in Local Machine:
+	
+	Open index.html 
+	
+	<html>
+	-
+	-
+	-
+	--
+	-
+	---
+	</html>
+	
+	Save & Test index.html 
+
+	Open index.html 
+	
+	<html>
+	-
+	-
+	-qqq
+	--qqqq
+	-dfsdfadf
+	adf
+	adadfsd
+	---
+	</html>	
+		
+	Save & Test index.html 
+	
+	VCS :
+
+	Open index.html 
+	
+	<html>
+	-
+	-
+	-
+	--
+	-
+	---
+	</html>			
+			
+
+	Save & Test index.html 			===> index.html_v1.0	
+		
+	Open index.html 
+	
+	<html>
+	-
+	-
+	-qqq
+	--qqqq
+	-dfsdfadf
+	adf
+	adadfsd
+	---
+	</html>	
+		
+	Save & Test index.html			===> index.html_v1.1			#	Tag/Version_Number/Commit_ID			
+	Save & Test index.html			===> index.html_v1.2
+	Save & Test index.html			===> index.html_v1.3
+	Save & Test index.html			===> index.html_v1.4
+	Save & Test index.html			===> index.html_v1.5
+	
+	
+Version Control Source Code :::	GitHub/Azure Repos 			 Artifacts : Jfrog/Azure Artifacts 		 Docker/ACS/DockerHub/ACR
+
+Save & Test index.html			===> index.html_v1.1	===> mywebapp.war_v1.1					===> mywebapp_img:v1.1				
+Save & Test index.html			===> index.html_v1.2    ===> mywebapp.war_v1.2                  ===> mywebapp_img:v1.2
+Save & Test index.html			===> index.html_v1.3    ===> mywebapp.war_v1.3                  ===> mywebapp_img:v1.3
+Save & Test index.html			===> index.html_v1.4    ===> mywebapp.war_v1.4                  ===> mywebapp_img:v1.4
+Save & Test index.html			===> index.html_v1.5	===> mywebapp.war_v1.5                  ===> mywebapp_img:v1.5
+
+
+What is GIT ?
+
+	- Git is Open-Source Distributed Version Control System 
+	- It is used to Version the Source Code Changes 
+	- It is used to Track the Source Code Changes 
+	- It is used to perform parallel development using git Branching Techniques
+	
+
+	GIT/GitHub ?
+
+		- Git is a client installed in the Local Machine
+		- GitHub is a Remote Repository Server - To Create Remote Git Repositories (GitHub/Azure Repos)
+		
+		
+	Three Types of VCS :
+
+		- Local VCS 			: Within the Local Machine meant for Single User
+		
+		- Centralized VCS 
+		
+		- Distributed VCS 
+		
+		
+	Working with Git :
+	
+	- Create Account in GitHub/Azure_Repo/GitLab
+
+	- Install git client in Local Machine 
+	
+	
+	- Git File Workflow :
+	
+	- Git Misc Cli Command :
+	
+	- Git Branching Techniques/Strategies :
+	
+	- Handle Remote Repositories(Azure Repositories) :
+	
+	
+	- Git File Workflow :	
+	
+	
+	Local Machine 																						Remote Repository Server 
+	
+	
+	Working Directory 					Stage_Area						Local Git Repository				Remote Repository
+	
+	index.html 		 ================>	index.html  =================>	index.html_V1.0		 ==============>	index.html_V1.0
+						git add 						git commit								git push
+	
+	
+	
+	Developers' Workload :
+	
+	- Enhancement / Bug_Fixing Project 
+	
+	- New Project 
+	
+	
+	
+	
+	git clone 				# To Clone/Copy the entire Remote Repository to Local Machine 
+	
+	git add 				# To Add the Changes from Working Directory to Staging Area 
+	
+	git commit 				# To Commit the Changes from Staging Area to Local Repository
+	
+	git Push 				# To push the Changes from Local Repository to Remote Repository
+	
+	git fetch/git pull 
+	
+		# Both git fetch and git pull are used to handle the incremental changes from Repositories.
+		
+		git fetch 	
+			- It is just to check for incremental changes in Remote Repository. If there is any incremental changes exist, get fetch will update the details of the incremental changes in the Local Repository. It will never update the Changes in Working Directory.
+			
+		git pull 	
+			- It will check for incremental changes in Remote Repository. If there is any incremental changes exist, get pull will update the details of the incremental changes in the Local Repository as well as the changes gets updated in the Working Directory.
+			
+			git pull => git fetch + git merge
+ 
+			# It is used keep the local Repository in-sync with remote repository
+			
+			
+######################
+Day 3: 16th July 2025
+######################	
+
+
+	- Version Control System :::
+	
+		- It is used to Version Control the Source Code Changes
+		- It is used to Track the Source Code Changes
+		
+		
+	Developer :
+	
+	Create Source Code in Local Machine:
+	
+	Open index.html 
+	
+	<html>
+	-
+	-
+	-
+	--
+	-
+	---
+	</html>
+	
+	Save & Test index.html 
+
+	Open index.html 
+	
+	<html>
+	-
+	-
+	-qqq
+	--qqqq
+	-dfsdfadf
+	adf
+	adadfsd
+	---
+	</html>	
+		
+	Save & Test index.html 
+	
+	VCS :
+
+	Open index.html 
+	
+	<html>
+	-
+	-
+	-
+	--
+	-
+	---
+	</html>			
+			
+
+	Save & Test index.html 			===> index.html_v1.0	
+		
+	Open index.html 
+	
+	<html>
+	-
+	-
+	-qqq
+	--qqqq
+	-dfsdfadf
+	adf
+	adadfsd
+	---
+	</html>	
+		
+	Save & Test index.html			===> index.html_v1.1			#	Tag/Version_Number/Commit_ID			
+	Save & Test index.html			===> index.html_v1.2
+	Save & Test index.html			===> index.html_v1.3
+	Save & Test index.html			===> index.html_v1.4
+	Save & Test index.html			===> index.html_v1.5
+	
+	
+Version Control Source Code :::	GitHub/Azure Repos 			 Artifacts : Jfrog/Azure Artifacts 		 Docker/ACS/DockerHub/ACR
+
+Save & Test index.html			===> index.html_v1.1	===> mywebapp.war_v1.1					===> mywebapp_img:v1.1				
+Save & Test index.html			===> index.html_v1.2    ===> mywebapp.war_v1.2                  ===> mywebapp_img:v1.2
+Save & Test index.html			===> index.html_v1.3    ===> mywebapp.war_v1.3                  ===> mywebapp_img:v1.3
+Save & Test index.html			===> index.html_v1.4    ===> mywebapp.war_v1.4                  ===> mywebapp_img:v1.4
+Save & Test index.html			===> index.html_v1.5	===> mywebapp.war_v1.5                  ===> mywebapp_img:v1.5
+
+
+What is GIT ?
+
+	- Git is Open-Source Distributed Version Control System 
+	- It is used to Version the Source Code Changes 
+	- It is used to Track the Source Code Changes 
+	- It is used to perform parallel development using git Branching Techniques
+	
+
+	GIT/GitHub ?
+
+		- Git is a client installed in the Local Machine
+		- GitHub is a Remote Repository Server - To Create Remote Git Repositories (GitHub/Azure Repos)
+		
+		
+	Three Types of VCS :
+
+		- Local VCS 			: Within the Local Machine meant for Single User
+		
+		- Centralized VCS 
+		
+		- Distributed VCS 
+		
+		
+	Working with Git :
+	
+	- Create Account in GitHub/Azure_Repo/GitLab
+
+	- Install git client in Local Machine 
+	
+	
+	- Git File Workflow :
+	
+	- Git Misc Cli Command :
+	
+	- Git Branching Techniques/Strategies :
+	
+	- Handle Remote Repositories(Azure Repositories) :
+	
+	
+	- Git File Workflow :	
+	
+	
+	Local Machine 																						Remote Repository Server 
+	
+	
+	Working Directory 					Stage_Area						Local Git Repository				Remote Repository
+	
+	index.html 		 ================>	index.html  =================>	index.html_V1.0		 ==============>	index.html_V1.0
+						git add 						git commit								git push
+	
+	
+	
+	Developers' Workload :
+	
+	- Enhancement / Bug_Fixing Project 
+	
+	- New Project 
+	
+	
+	
+	
+	git clone 				# To Clone/Copy the entire Remote Repository to Local Machine 
+	
+	git add 				# To Add the Changes from Working Directory to Staging Area 
+	
+	git commit 				# To Commit the Changes from Staging Area to Local Repository
+	
+	git Push 				# To push the Changes from Local Repository to Remote Repository
+	
+	git fetch/git pull 
+	
+		# Both git fetch and git pull are used to handle the incremental changes from Repositories.
+		
+		git fetch 	
+			- It is just to check for incremental changes in Remote Repository. If there is any incremental changes exist, get fetch will update the details of the incremental changes in the Local Repository. It will never update the Changes in Working Directory.
+			
+		git pull 	
+			- It will check for incremental changes in Remote Repository. If there is any incremental changes exist, get pull will update the details of the incremental changes in the Local Repository as well as the changes gets updated in the Working Directory.
+			
+			git pull => git fetch + git merge
+ 
+			# It is used keep the local Repository in-sync with remote repository
+	
+	Fork 					# # To Copy the one entire Remote Repository to Another Remote Repository 
+	
+		
+		
+		
+	- Git Branching Techniques/Strategies :
+	
+		- Git Branch is a logical copy of a repository's default branch
+		
+		- It is used to perform parallel development
+		
+		- Any git repository is based on Branch called default branch - main/master
+		
+		- Branching Strategies are used to Maintain the integrity of Master/Main Branch. *************
+		
+	
+	Scenario 1: 
+	
+		Repo1 :
+		
+			master : c1,c2,c3		==> index.html		$ refers to Prod Version 
+			
+				feature1_Branch : c1,c2,c3 	==> index.html
+				
+						c1,c2,c3,f1cm1,f1cm2,f1cm3
+
+
+	Scenario 2: 	
+	
+		Repo1 :
+		
+			master : c1,c2,c3		==> index.html		$ refers to Prod Version 
+			
+						c1,c2,c3,c4								# c4 - changes merged from Developer_Branch
+			
+				Developer_Branch : c1,c2,c3
+				
+							c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3				# Upon Merging changes from feature1 & feature2
+				
+					feature1_Branch : c1,c2,c3 	==> index.html
+
+							c1,c2,c3,f1cm1,f1cm2,f1cm3
+							
+					feature2_Branch : c1,c2,c3 	==> index.html
+
+							c1,c2,c3,f2cm1,f2cm2,f2cm3
+						
+						
+	Scenario 3: 	
+	
+		Repo1 :
+		
+			master : c1,c2,c3		==> index.html		$ refers to Prod Version 
+			
+						c1,c2,c3,c4								# c4 - changes merged from Integration_Branch					
+						
+				Integration_Branch : c1,c2,c3
+			
+							c1,c2,c3,Developer1_Changes,Developer2_Changes		# Upon Merging changes from Developer1 & Developer2
+			
+					Developer1_Branch : c1,c2,c3
+					
+								c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3	# Upon Merging changes from feature1 & feature2
+					
+						feature1_Branch : c1,c2,c3 	==> index.html
+
+								c1,c2,c3,f1cm1,f1cm2,f1cm3
+								
+						feature2_Branch : c1,c2,c3 	==> index.html
+
+								c1,c2,c3,f2cm1,f2cm2,f2cm3
+								
+					Developer2_Branch : c1,c2,c3
+					
+								c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3	# Upon Merging changes from feature1 & feature2
+					
+						feature1_Branch : c1,c2,c3 	==> index.html
+
+								c1,c2,c3,f1cm1,f1cm2,f1cm3
+								
+						feature2_Branch : c1,c2,c3 	==> index.html
+
+								c1,c2,c3,f2cm1,f2cm2,f2cm3
+								
+
+	Scenario 4: 	
+	
+		Repo1 :
+		
+			master : c1,c2,c3		==> index.html		$ refers to Prod Version 
+			
+						c1,c2,c3,c4								# c4 - changes merged from Release_Branch	
+
+
+				Release_Branch : c1,c2,c3	
+
+							c1,c2,c3,Team1_Changes,Team2_Changes
+				
+						
+					Integration_Branch1 : c1,c2,c3																	# Team1
+				
+								c1,c2,c3,Developer1_Changes,Developer2_Changes		# Upon Merging changes from Developer1 & Developer2
+				
+						Developer1_Branch : c1,c2,c3
+						
+									c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3	# Upon Merging changes from feature1 & feature2
+						
+							feature1_Branch : c1,c2,c3 	==> index.html
+
+									c1,c2,c3,f1cm1,f1cm2,f1cm3
+									
+							feature2_Branch : c1,c2,c3 	==> index.html
+
+									c1,c2,c3,f2cm1,f2cm2,f2cm3
+									
+						Developer2_Branch : c1,c2,c3	
+						
+									c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3	# Upon Merging changes from feature1 & feature2
+						
+							feature1_Branch : c1,c2,c3 	==> index.html
+
+									c1,c2,c3,f1cm1,f1cm2,f1cm3
+									
+							feature2_Branch : c1,c2,c3 	==> index.html
+
+									c1,c2,c3,f2cm1,f2cm2,f2cm3
+
+
+					Integration_Branch2 : c1,c2,c3																	# Team2
+				
+								c1,c2,c3,Developer1_Changes,Developer2_Changes		# Upon Merging changes from Developer1 & Developer2
+				
+						Developer1_Branch : c1,c2,c3
+						
+									c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3	# Upon Merging changes from feature1 & feature2
+						
+							feature1_Branch : c1,c2,c3 	==> index.html
+
+									c1,c2,c3,f1cm1,f1cm2,f1cm3
+									
+							feature2_Branch : c1,c2,c3 	==> index.html
+
+									c1,c2,c3,f2cm1,f2cm2,f2cm3
+									
+						Developer2_Branch : c1,c2,c3	
+						
+									c1,c2,c3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3	# Upon Merging changes from feature1 & feature2
+						
+							feature1_Branch : c1,c2,c3 	==> index.html
+
+									c1,c2,c3,f1cm1,f1cm2,f1cm3
+									
+							feature2_Branch : c1,c2,c3 	==> index.html
+
+									c1,c2,c3,f2cm1,f2cm2,f2cm3
+									
+									
+Next :
+
+	- Install git client in Local Machine 
+
+	- VS Code to work with Git Repos
+	
+	- Handle Remote Azure Repos
