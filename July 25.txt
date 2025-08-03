@@ -1,0 +1,137 @@
+#######################
+Day 10: 25th July 2025
+#######################	
+	
+	- GIT stash :::
+	
+		- Used to save the uncommitted changes to the temporary area(list).
+		- stash is list DS
+	
+	
+		Repo :
+		
+			master : cm1,cm2
+			
+				feature1: cm1,cm2
+							cm1,cm2,f1cm1,f1cm2
+	
+	
+		- git stash list							# To get the list of stashed entires.
+		
+		- git stash save "for l1.txt"				# Create an entry in the stash list
+		
+		- Eg. git stash list
+		
+				$ git stash list
+				stash@{0}: On feature1: for l7.txt	=====>	Latest Entry.
+				stash@{1}: On feature1: for l6.txt
+				stash@{2}: On feature1: for l5.txt
+				stash@{3}: On feature1: for l4.txt
+				stash@{4}: On feature1: for l3.txt
+				stash@{5}: On feature1: for l2.txt
+				stash@{6}: On feature1: for l1.txt		
+
+		- git stash apply 							
+					# To apply the latest entry from the stash list back to staging area
+
+		- git stash apply stash@{2}							
+					# To apply a specific entry from the stash list back to staging area
+					
+		- git stash drop							
+					# To delete the latest entry from the stash list 
+
+		- git stash drop stash@{2}							
+					# To delete a specific entry from the stash list 
+					
+		- git stash pop													
+					# To apply the latest entry from the stash list back to staging area as well as delete the latest entry from the stash list 
+		
+		- git stash pop	stash@{3}												
+					# To apply a specific entry from the stash list back to staging area as well as delete that entry from the stash list 
+					
+		- git stash clear 
+					# To Clean-up the Stash List.
+					
+					
+		
+
+	- Handling github/Az-Remote Repos:
+	
+		
+		Developers' Workload :
+	
+			- Enhancement / Bug_Fixing Project 
+					git clone 				# To Clone/Copy the entire Remote Repository to Local Machine 
+			
+			- New Project 
+					git init 				# TO Initialize a local repo.
+					
+					
+					
+		Remote Repo :
+		
+			master : c1,c2,c3 
+			
+				sample1.txt 		
+							20 Records 
+							20KB
+							
+							+20 Records 
+							40KB
+							
+			git clone : 
+			
+			master : c1,c2,c3 
+			
+				sample1.txt 		
+							20 Records 
+							20KB	
+			git pull 
+	
+	
+
+
+	- Working with Remote Repos :
+	
+	
+		git clone https://github.com/SK-AZ-400-1407/java-webapp-project.git
+		
+		git clone https://LoksaiETA-Orgn@dev.azure.com/LoksaiETA-Orgn/devops-proj1/_git/java-webapp-project
+		
+		git credentials to push the changes to remote repository :
+		
+			Create Personal Access Token 
+			
+				in github & Azure DevOps
+				
+				github pat : dgdgsdfg
+				
+				az pat2 : sdgsdfgdfgdfg
+				
+				
+				
+		git push -u origin local-feature1				# Push the incremental changes to the remote repository
+		Pull Request :
+		
+		
+		VS Code : 
+		
+			for Github
+		
+			for Az Repo.
+				===> 		Install The Azure Repos extension for VS Code 
+		
+		
+					- DevOps Organization 
+					- 	Login thru web-brower : Email_ID & Password.
+
+Next :
+				
+Az Build Pipeline :::
+
+		- VS Code :
+		
+			- Update Remote Az Repo from VS Code 
+			- Trigger Az Build Pipeline		# CI 
+			- Release Pipelines 			# CD
+		
