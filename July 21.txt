@@ -1,0 +1,112 @@
+######################
+Day 6: 21st July 2025
+######################
+
+	- Azure Boards! 
+		- Used to perform Application LifeCycle Management 
+		
+		
+		
+	- Create Azure DevOps Organization
+	
+	- https://aka.ms/azpipelines-parallelism-request - Private Project Pipeline 
+	
+	- Organization Settings :
+	
+		- User Authencation & Authorization 		# Who can access, and what level of access they can have!
+		
+		- i.e., Add Users / Create a Team & Add users to the teams
+		
+	- Create Project : Agile/Scrum 
+	
+	
+		Basic Project Process:				
+		
+			EPIC	
+				issue1
+					task1
+					task2
+				issue2
+					task 
+					
+		Agile Project Process:
+		
+			EPIC 					- Long Term Project Objective - Migrate 500+ Applications to Cloud
+				Feature - Q1		- ?
+					UserStory1	
+						task1
+						task2
+						bug2						
+					UserStory2
+				Feature - Q2
+					UserStory1 
+					UserStory2		
+				Feature - Q3
+					UserStory1 
+					UserStory2	
+				Feature - Q4
+					UserStory1 
+					UserStory2						
+
+
+		SCRUM Project Process:
+		
+			EPIC 					- Long Term Project Objective - Migrate 500+ Applications to Cloud
+				Feature - Q1
+					Product Backlog Item1	
+						task1
+						task2
+						bug2						
+					Product Backlog Item2
+				Feature - Q2
+					Product Backlog Item1
+					Product Backlog Item2		
+
+	Use Cases :
+	
+		Scenario 1:
+		
+			On DevOps Perspective :		
+			
+			Project : DevOps-Implementation		
+
+
+			EPIC : DevOps-Implementation for Micro-Service based Application :				# Epic 
+			
+				UserStory1 : Detailed DevOps Assessment!									# User Story1
+				
+					- Interact with the stakeholders & Gather details						# Task1
+					
+					- Prepare a DevOps Assessment Report 									# Task2
+					
+					- Review DevOps Assessment Report										# Task3 
+					
+					- Get it approved!														# Task4
+					
+				
+				UserStory2 : Onboard Applications to DevOps :
+				
+					- Create Project Repo and CICD Pipeline to Build and Deploy Java Web Application
+				
+					- Create Project Repo and CICD Pipeline to Build and Deploy .Net Application
+					
+					
+				UserStory3 : Periodic Enhancement of DevOps Process and Tools 
+				
+					- Implement the Containerization using Docker & Kubernetes
+				
+	
+				UserStory4 : Infra-Structure Provisioning using DevOps Pipeline 
+				
+					- Automate Test-Environments Provisioning using IAC Tools.
+	
+	
+	
+	
+	
+ - Define the Iterations & Area!
+ 
+		-> Identify the Timeline	- sprint time : 2 Weeks / 3 Weeks
+		
+		-> Area is used to identify the team/ownership
+	
